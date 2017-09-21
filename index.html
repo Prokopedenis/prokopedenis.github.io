@@ -9,7 +9,24 @@
 
 <form action="ajax.php" method="POST">
   <input name="href" value="">
+  <input type='button' onclick='SendPost()' value='asdads'>
 </form>
+  
+<script>
+  function SendPost()
+  { 
+    alert('aasdasdasd');
+    var xhr = new XMLHttpRequest();
+
+    var params = 'name=' + encodeURIComponent(name);
+
+    xhr.open("GET", 'ajax.php?' + params, true);
+
+    xhr.onreadystatechange = ...;
+
+    xhr.send();
+  }
+</script>
 
 </body>
 
